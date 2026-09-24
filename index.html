@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CINEZHA — Premium Web Design Studio</title>
+<meta name="description" content="CINEZHA creates modern, responsive websites for businesses, creators and professionals.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;background:#060812;color:#f5f7ff;line-height:1.6}
+body:before{content:"";position:fixed;inset:-30%;background:radial-gradient(circle at 20% 20%,#2436a522,transparent 28%),radial-gradient(circle at 80% 30%,#8a35ff1c,transparent 30%);z-index:-1}
+.container{width:min(1120px,92%);margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:900;letter-spacing:2px}.logo span{color:#7c6cff}
+nav a{color:#aeb5ca;text-decoration:none;margin-left:25px;font-size:14px}nav a:hover{color:#fff}
+.hero{min-height:650px;display:grid;place-items:center;text-align:center;padding:70px 0}
+.badge{display:inline-block;border:1px solid #ffffff18;background:#ffffff08;padding:8px 14px;border-radius:999px;color:#aeb5ca;font-size:13px;margin-bottom:22px}
+h1{font-size:clamp(46px,8vw,86px);line-height:.98;letter-spacing:-4px;max-width:900px;margin:auto}
+.gradient{background:linear-gradient(90deg,#fff,#8f8cff,#59c7ff);-webkit-background-clip:text;color:transparent}
+.hero p{max-width:650px;margin:25px auto;color:#aeb5ca;font-size:18px}
+.btn{display:inline-block;padding:14px 22px;border-radius:14px;text-decoration:none;font-weight:700;margin:6px}
+.primary{background:linear-gradient(135deg,#625cff,#8c45ff);color:white;box-shadow:0 12px 35px #665cff30}.secondary{border:1px solid #ffffff18;color:#fff;background:#ffffff08}
+section{padding:90px 0}.section-title{text-align:center;margin-bottom:45px}.section-title h2{font-size:42px;letter-spacing:-1.5px}.section-title p{color:#8f97ad;margin-top:8px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,#ffffff0b,#ffffff04);border:1px solid #ffffff10;border-radius:22px;padding:28px;backdrop-filter:blur(15px);transition:.3s}.card:hover{transform:translateY(-6px);border-color:#7b6cff55}
+.icon{font-size:28px;margin-bottom:16px}.card h3{margin-bottom:8px}.card p{color:#929ab0;font-size:14px}
+.price{font-size:32px;font-weight:800;margin:18px 0}.muted{color:#929ab0}
+.portfolio{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{min-height:230px;border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:end;background:linear-gradient(135deg,#101a3b,#20103a);border:1px solid #ffffff10}.project:nth-child(2){background:linear-gradient(135deg,#101f29,#24133a)}.project h3{font-size:25px}.project p{color:#b0b7ca}
+.contact{max-width:750px;margin:auto;text-align:center;background:#ffffff07;border:1px solid #ffffff10;border-radius:28px;padding:55px 25px}.contact p{color:#9da5ba;margin:15px auto 25px}
+footer{border-top:1px solid #ffffff0d;padding:28px 0;color:#747d95;text-align:center;font-size:13px}
+@media(max-width:760px){nav{display:none}.grid,.portfolio{grid-template-columns:1fr}.hero{min-height:570px}h1{letter-spacing:-2px}.section-title h2{font-size:34px}}
+
+/* CINEZHA V2 upgrades — existing handwritten font intentionally preserved */
+.brand-wrap{display:flex;align-items:baseline;gap:10px}.brand-wrap small{font-family:Inter,Arial,sans-serif;font-size:9px;letter-spacing:2px;color:#69728b}
+.nav-cta{font-family:Inter,Arial,sans-serif;text-decoration:none;color:#fff;background:#ffffff0a;border:1px solid #ffffff15;padding:9px 14px;border-radius:12px;font-size:12px}
+.hero{position:relative;overflow:hidden}.hero-copy{position:relative;z-index:2}.hero-kicker{font-family:Inter,Arial,sans-serif;color:#9ca6bf;letter-spacing:2px;font-size:10px;margin-bottom:18px}.hero-kicker span{display:inline-block;width:22px;height:1px;background:#7c6cff;vertical-align:middle;margin:0 7px}
+.hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:#765cff18;filter:blur(40px);right:-150px;top:30px;animation:floatGlow 7s ease-in-out infinite}
+.hero-actions{margin-top:8px}.trust-row{font-family:Inter,Arial,sans-serif;display:flex;justify-content:center;gap:22px;color:#68728c;font-size:11px;margin-top:25px}
+.card{position:relative;overflow:hidden}.card:after{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:#765cff12;right:-60px;top:-60px;filter:blur(12px)}.card-link{font-family:Inter,Arial,sans-serif;display:block;margin-top:18px;color:#7e78ff;font-size:12px}
+.project{position:relative;min-height:270px;overflow:hidden}.project:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,#7b68ff20,transparent 35%);opacity:.9}.project>*{position:relative}.project-top{font-family:Inter,Arial,sans-serif;display:flex;justify-content:space-between;color:#78829b;font-size:10px;letter-spacing:1px;text-transform:uppercase;position:absolute;top:24px;left:28px;right:28px}.project a{font-family:Inter,Arial,sans-serif;color:#9b94ff;text-decoration:none;font-size:12px;display:inline-block;margin-top:15px}.project-feature{background:linear-gradient(135deg,#151b48,#2a123f)}
+.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;text-align:left;margin-top:25px}form{display:grid;gap:11px}input,select,textarea{width:100%;border:1px solid #ffffff12;background:#070b18;color:#fff;border-radius:13px;padding:13px 14px;outline:none;font-family:Inter,Arial,sans-serif;font-size:13px}input:focus,select:focus,textarea:focus{border-color:#756cff88}textarea{resize:vertical}.contact-side{display:flex;flex-direction:column;gap:12px}.mini{padding:17px;border:1px solid #ffffff10;border-radius:15px;background:#ffffff05;font-family:Inter,Arial,sans-serif}.mini span{display:block;color:#727c96;font-size:11px}.mini strong{font-size:14px}.whatsapp-card,.email-card{padding:17px;border-radius:15px;text-decoration:none;font-family:Inter,Arial,sans-serif}.whatsapp-card{background:#ffffff0a;border:1px solid #ffffff12;color:#fff}.whatsapp-card b{float:right}.email-card{color:#9d98ff;border:1px solid #7068ff33;background:#6b61ff08;font-size:12px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+@keyframes floatGlow{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(22px) scale(1.08)}}
+@media(max-width:760px){.nav{height:70px}.nav-cta{display:none}.brand-wrap small{display:none}.hero{padding-top:55px;min-height:620px}.hero-kicker{font-size:9px}.hero h1{font-size:clamp(42px,12vw,62px);line-height:1.02}.hero p{font-size:15px;max-width:330px}.hero-actions{display:flex;flex-direction:column;align-items:center}.hero-actions .btn{width:min(290px,90%);text-align:center}.trust-row{gap:10px;flex-wrap:wrap;font-size:9px}.hero-glow{width:320px;height:320px;right:-130px}.contact-grid{grid-template-columns:1fr}.contact{padding:35px 18px}}
+</style>
+</head>
+<body>
+<header class="container nav">
+<div class="brand-wrap"><div class="logo">CINEZHA<span>.</span></div><small>WEB STUDIO</small></div>
+<nav><a href="#services">Services</a><a href="#work">Portfolio</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></nav>
+<a class="nav-cta" href="#contact">Let's Talk ↗</a>
+</header>
+
+<main>
+<section class="hero container">
+<div class="hero-copy reveal">
+<div class="hero-kicker"><span></span> CINEZHA DIGITAL STUDIO <span></span></div>
+<div class="badge">WEB DESIGN • DEVELOPMENT • DIGITAL</div>
+<h1>Websites that make your <span class="gradient">brand stand out.</span></h1>
+<p>Premium, fast and mobile-first websites crafted for businesses, creators and ambitious brands.</p>
+<div class="hero-actions">
+<a class="btn primary" href="#contact">Start a Project <b>→</b></a>
+<a class="btn secondary" href="#work">Explore Portfolio</a>
+</div>
+<div class="trust-row"><span>✦ Responsive</span><span>✦ Modern UI</span><span>✦ Fast Launch</span></div>
+</div>
+<div class="hero-glow"></div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="section-title"><h2>What I Build</h2><p>Clean design. Smooth experience. Real results.</p></div>
+<div class="grid">
+<div class="card reveal"><div class="icon">✦</div><h3>Business Websites</h3><p>Professional websites that build trust and help customers find your business.</p><span class="card-link">Explore →</span></div>
+<div class="card reveal"><div class="icon">◈</div><h3>Landing Pages</h3><p>High-impact pages for products, services, campaigns and promotions.</p><span class="card-link">Explore →</span></div>
+<div class="card reveal"><div class="icon">⌁</div><h3>Creator Websites</h3><p>Portfolio and personal websites for artists, YouTubers, musicians and freelancers.</p><span class="card-link">Explore →</span></div>
+<div class="card reveal"><div class="icon">▣</div><h3>Restaurant Websites</h3><p>Mobile-first menus, location, contact and WhatsApp ordering experiences.</p><span class="card-link">Explore →</span></div>
+<div class="card reveal"><div class="icon">⚡</div><h3>Website Redesign</h3><p>Turn an outdated website into a modern and responsive digital experience.</p><span class="card-link">Explore →</span></div>
+<div class="card reveal"><div class="icon">◎</div><h3>Deployment</h3><p>Domain, hosting and launch support so your website is ready for customers.</p><span class="card-link">Explore →</span></div>
+</div></div>
+</section>
+
+<section id="work">
+<div class="container">
+<div class="section-title"><h2>Selected Work</h2><p>Replace these demo cards with your real projects.</p></div>
+<div class="portfolio">
+<div class="project project-feature reveal"><div class="project-top"><span>01</span><span>Entertainment</span></div><div><h3>CINEZHA</h3><p>Modern entertainment / media web experience.</p><a href="#contact">View concept →</a></div></div>
+<div class="project reveal"><div class="project-top"><span>02</span><span>Business</span></div><div><h3>Business Website</h3><p>Clean conversion-focused business website concept.</p><a href="#contact">View concept →</a></div></div>
+<div class="project reveal"><div class="project-top"><span>03</span><span>Creator</span></div><div><h3>Creator Portfolio</h3><p>Personal brand website for a digital creator.</p><a href="#contact">View concept →</a></div></div>
+<div class="project reveal"><div class="project-top"><span>04</span><span>Product</span></div><div><h3>Product Landing Page</h3><p>Premium landing page with strong visual hierarchy.</p><a href="#contact">View concept →</a></div></div>
+</div></div>
+</section>
+
+<section id="pricing">
+<div class="container">
+<div class="section-title"><h2>Simple Pricing</h2><p>Final quote depends on pages and features.</p></div>
+<div class="grid">
+<div class="card"><h3>Starter</h3><div class="price">₹1,999</div><p>1-page website<br>Responsive design<br>Contact / WhatsApp button<br>Basic deployment</p></div>
+<div class="card"><h3>Business</h3><div class="price">₹4,999</div><p>Up to 5 pages<br>Responsive UI<br>Contact integration<br>Basic SEO<br>Deployment support</p></div>
+<div class="card"><h3>Professional</h3><div class="price">₹8,999+</div><p>Custom UI/UX<br>Advanced sections<br>Animations<br>SEO setup<br>Custom features</p></div>
+</div></div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="contact">
+<div class="badge">LET'S BUILD</div><h2>Have a project in mind?</h2>
+<p>Send your requirements. CINEZHA will get back to you with the next steps.</p>
+<div class="contact-grid">
+<form id="projectForm">
+<input id="name" placeholder="Your name" required>
+<input id="email" type="email" placeholder="Email address" required>
+<select id="service" required>
+<option value="">Select a service</option>
+<option>Business Website</option><option>Landing Page</option><option>Portfolio Website</option><option>Restaurant Website</option><option>Website Redesign</option><option>Custom Website</option>
+</select>
+<textarea id="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+<button class="btn primary" type="submit">Send Enquiry →</button>
+</form>
+<div class="contact-side">
+<div class="mini"><span>WhatsApp</span><strong>Quick response</strong></div>
+<a class="whatsapp-card" href="https://wa.me/916385834963?text=Hi%20Cinezha%2C%20I%20need%20a%20website" target="_blank">Chat on WhatsApp <b>↗</b></a>
+<a class="email-card" href="mailto:cinezhaofficial@gmail.com">cinezhaofficial@gmail.com</a>
+</div>
+</div>
+</div></div>
+</section>
+</main>
+<footer>© 2026 CINEZHA. Web Design & Development.</footer>
+
+<script>
+const observer=new IntersectionObserver((entries)=>{
+ entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+document.getElementById('projectForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const name=encodeURIComponent(document.getElementById('name').value);
+ const email=encodeURIComponent(document.getElementById('email').value);
+ const service=encodeURIComponent(document.getElementById('service').value);
+ const message=encodeURIComponent(document.getElementById('message').value);
+ const body=`Name: ${name}%0AEmail: ${email}%0AService: ${service}%0AProject: ${message}`;
+ window.location.href=`mailto:cinezhaofficial@gmail.com?subject=CINEZHA%20Website%20Enquiry&body=${body}`;
+});
+</script>
+</body>
+</html>
